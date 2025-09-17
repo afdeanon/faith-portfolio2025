@@ -3,6 +3,7 @@ import CurrentPersonalCarousel from '../UI/CurrentPersonalCarousel';
 import CurrentUpdatesCarousel from '../UI/CurrentUpdatesCarousel';
 import CurrentWorkCarousel from '../UI/CurrentWorkCarousel';
 import Navbar from '../UI/contactNavbar';
+import WorkPage from './Work';
 import contactNavBar from '../UI/contactNavbar';
 {/* Profile Component 
   This component displays the user's profile information including name, title, introduction, skills, and contact details.
@@ -51,30 +52,13 @@ const Profile = ({ isDarkMode }) => {
         {/*
         What I've Been Up to
         */}
-        <div className="h-screen px-5">
-          <div className="flex p-6 text-center md:text-middle ">
-            <h1 className="text-5xl font-bold mb-2">
+        <div className="flex flex-row p-6 text-center md:text-middle">
+            <h1 className="text-5xl mt-10">
               What I've been up to
             </h1>
           </div>
-          <div className="grid md:grid-cols-3 gap-1 mt-8">
-
-            {/* <div className=" rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Skills</h3>
-            <div className="flex flex-wrap gap-2">
-              {skills.frontend.concat(skills.backend, skills.tools).map((skill) => (
-                <span key={skill} className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div> */}
-
-            {/* Current Updates Section
-            Carousel component for your current updates that displays one update at a time with navigation dots and auto-scroll functionality.
-            */}
-
-
+        <div className="flex grid px-5 min-h-screen">
+          <div className="flex grid md:grid-cols-3 gap-2 mt-10">
             <div>
               <CurrentUpdatesCarousel />
             </div>
@@ -85,25 +69,6 @@ const Profile = ({ isDarkMode }) => {
               <CurrentPersonalCarousel />
             </div>
           </div>
-
-
-
-          {/* Contact Section
-          <div className=" rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-gray-700 dark:text-slate-300">
-              {contact.email && <p>📧 {contact.email}</p>}
-              {contact.phone && <p>📱 {contact.phone}</p>}
-              {contact.location && <p>🌍 {contact.location}</p>}
-              {contact.linkedin && <p>💼 <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">LinkedIn Profile</a></p>}
-              {contact.github && <p>🐙 <a href={contact.github} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"
-              >GitHub Profile</a></p>}
-              {contact.website && <p>🔗 <a href
-                ={contact.website} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Website</a></p>}
-              {contact.portfolio && <p>🖥️ <a href
-                ={contact.portfolio} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Portfolio</a></p>}
-            </div>
-          </div> */}
         </div>
       </div>
 

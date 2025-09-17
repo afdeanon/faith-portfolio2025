@@ -22,8 +22,8 @@ const SemiCircleNavigation = () => {
 
   const navItems = [
     { id: 'profile', label: 'Profile', icon: User, angle: -70 },
-    { id: 'education', label: 'Education', icon: GraduationCap, angle: -35 },
-    { id: 'work', label: 'Work', icon: Briefcase, angle: 0 },
+    { id: 'work', label: 'Work', icon: Briefcase, angle: -35 },
+    { id: 'education', label: 'Education', icon: GraduationCap, angle: -0 },
     { id: 'projects', label: 'Projects', icon: Code, angle: 35 },
     { id: 'passion', label: 'Passion', icon: Heart, angle: 70 },
   ];
@@ -182,7 +182,7 @@ const SemiCircleNavigation = () => {
       </div>
 
       {/* Main Content Area with sections */}
-      <div className="ml-52">
+      <div className="reflexive ml-52">
         <div
           ref={el => sectionRefs.current.profile = el}
           data-section="profile"
@@ -191,17 +191,18 @@ const SemiCircleNavigation = () => {
         </div>
 
         <div
+          ref={el => sectionRefs.current.work = el}
+          data-section="work"
+          className = "pt-10"
+        >
+          <Work isDarkMode={isDarkMode} />
+        </div>
+
+        <div
           ref={el => sectionRefs.current.education = el}
           data-section="education"
         >
           <Education isDarkMode={isDarkMode} />
-        </div>
-
-        <div
-          ref={el => sectionRefs.current.work = el}
-          data-section="work"
-        >
-          <Work isDarkMode={isDarkMode} />
         </div>
 
         <div
