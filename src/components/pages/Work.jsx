@@ -1,17 +1,7 @@
-// const Work = () => {
-//     return (
-//         <div className="flex flex-col justify-center items-center">
-//             <h1 className="text-lg">I've only just begun</h1>
-//             <h1 className = "text-5xl font-bold">Real World Experience</h1>
-//         </div>
-//     );
-// }
-// export default Work;
-
 import React, { useState } from 'react';
 import { ChevronDown, ChevronRight, MapPin, Calendar, ExternalLink } from 'lucide-react';
-import { workData } from '../../data/workData';;
-
+import { workData } from '../../data/workData';
+import Navbar from '../UI/contactNavbar';
 
 const MediaCarousel = ({ media }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -272,6 +262,7 @@ const WorkSection = ({ work, isLast }) => {
 };
 
 const WorkPage = () => {
+    const { contact, work, services } = workData
     return (
         <div className="min-h-screen bg-gray-50 pr-12">
             <div className="max-w-4xl mx-auto">
@@ -288,7 +279,26 @@ const WorkPage = () => {
                         isLast={index === workData.work.length - 1}
                     />
                 ))}
+                {/*
+                Contact Me
+            */}
+                <div className="flex justify-center text-center items-center">
+                    <div className="relative mx-6 my-12">
+                        <div className="m-4 sm:m-6 md:m-8">
+                            <div className="mb-4 sm:mb-5 md:mb-12">
+                                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 m-1 sm:m-2">{contact.title}</h1>
+                                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 mb-1 sm:mb-2 px-2">{contact.heading}</p>
+                            </div>
+                            <div className="flex justify-center scale-75 sm:scale-90 md:scale-100">
+                                <Navbar />
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
         </div>
     );
 };

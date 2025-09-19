@@ -23,8 +23,8 @@ const SemiCircleNavigation = () => {
   const navItems = [
     { id: 'profile', label: 'Profile', icon: User, angle: -70 },
     { id: 'work', label: 'Work', icon: Briefcase, angle: -35 },
-    { id: 'education', label: 'Education', icon: GraduationCap, angle: -0 },
-    { id: 'projects', label: 'Projects', icon: Code, angle: 35 },
+    { id: 'projects', label: 'Projects', icon: Code, angle: -0 },
+    { id: 'education', label: 'Education', icon: GraduationCap, angle: 35 },
     { id: 'passion', label: 'Passion', icon: Heart, angle: 70 },
   ];
 
@@ -178,6 +178,7 @@ const SemiCircleNavigation = () => {
           >
             {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
+
         </div>
       </div>
 
@@ -193,24 +194,24 @@ const SemiCircleNavigation = () => {
         <div
           ref={el => sectionRefs.current.work = el}
           data-section="work"
-          className = "pt-10"
+          className="pt-10"
         >
           <Work isDarkMode={isDarkMode} />
         </div>
-
-        <div
-          ref={el => sectionRefs.current.education = el}
-          data-section="education"
-        >
-          <Education isDarkMode={isDarkMode} />
-        </div>
-
         <div
           ref={el => sectionRefs.current.projects = el}
           data-section="projects"
         >
           <Projects isDarkMode={isDarkMode} />
         </div>
+      </div>
+      <div
+        ref={el => sectionRefs.current.education = el}
+        data-section="education"
+      >
+        <Education isDarkMode={isDarkMode} />
+      </div>
+      <div className="reflexive ml-52">
 
         <div
           ref={el => sectionRefs.current.passion = el}
@@ -219,7 +220,9 @@ const SemiCircleNavigation = () => {
           <Passion isDarkMode={isDarkMode} />
         </div>
       </div>
+
     </div>
+
   );
 };
 

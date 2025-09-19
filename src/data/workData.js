@@ -66,6 +66,31 @@ export const workData = {
             buttonTitle: "",
             buttonVisibility: "false",
             website: "",
-        },
+        }
     ],
+    contact:{
+        title: "Contact Me",
+        heading: "I'm open to collaborations and work opportunities!",
+        image: "",
+    },
+    services:[
+        {
+            webDev: {
+                title: "Need a website?",
+                description: "Hit me up lmaoo.",
+                image: "",
+
+            },
+            mobileDev: {
+                title: "",
+                description: "",
+                image: "",
+            },
+            engineering: {
+                title: "Open to career oportunities",
+                desctiption: "I'm interested in...",
+                image: "",
+            }
+        }
+    ]
 }

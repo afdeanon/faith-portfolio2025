@@ -34,7 +34,7 @@ const Profile = ({ isDarkMode }) => {
             <p className="text-1xl ext-gray-700 dark:text-slate-600">
               {introduction}
             </p>
-            <div className="py-2">
+            <div className="flex justify-center py-2">
               <Navbar />
             </div>
           </div>

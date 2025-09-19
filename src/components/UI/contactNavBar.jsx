@@ -5,7 +5,7 @@ const Navbar = () => {
     const {  contact } = navBarData;
     
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex items-center">
       <div className="relative">
         {/* Main navbar container */}
         <div className="flex items-center bg-white rounded-full shadow-lg border border-gray-200 px-2 py-1 space-x-2">
